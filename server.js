@@ -14,7 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // ROUTES
-app.get("/", (req, res) => res.send("It's the home page."));
+app.get("*", (req, res) =>
+  res.send(
+    "You need to add some routes if this thing is going to mean anything."
+  )
+);
 
 // START THE SERVER
 app.listen(PORT, () =>
