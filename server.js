@@ -1,5 +1,6 @@
 // DEPENDENCIES
 const express = require("express");
+const routes = require("./routes/index.js");
 
 // DATA
 
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // ROUTES
+app.use(routes);
+
 app.get("*", (req, res) =>
   res.send(
     "You need to add some routes if this thing is going to mean anything."
